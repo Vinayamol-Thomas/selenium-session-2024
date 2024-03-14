@@ -30,8 +30,7 @@ public class Day1Task2 {
 		month.selectByValue("3");
 		driver.findElement(By.linkText("14")).click();
 		driver.findElement(By.xpath("//input[@value='PROCEED']")).click();
-		Alert alert=driver.switchTo().alert();
-		String alertText=alert.getText();
+		String alertText= driver.findElement(By.xpath("//li[text()='• Please accept Terms and Conditions ']")).getText();
 		System.out.println("Alert message is "+alertText);
 		
 	}
